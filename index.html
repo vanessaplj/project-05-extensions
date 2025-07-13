@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extensions</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <!--------------------------------------------------------------------------------------->
+        <section class="sec1">
+            <div class="title1 shadow">
+                <picture>
+                    <img src="./img/logo.svg" alt="Extensions" class="pic-title">
+                </picture>
+                <button type="button" aria-label="Change color theme" id="colorbtn">
+                    <img src="./img/icon-moon.svg" alt="change color theme" class="lightmode" id="lightmode">
+                </button>
+            </div>
+        </section>
+        <!--------------------------------------------------------------------------------------->
+        <section class="sec2">
+            <h1>Extensions List</h1>
+            <div id="filters">
+                <button type="button" class="btn botao radio-btn active" data-bs-toggle="button">All</button>
+                <button type="button" class="btn botao radio-btn" data-bs-toggle="button">Active</button>
+                <button type="button" class="btn botao radio-btn" data-bs-toggle="button">Inactive</button>
+            </div>
+        </section>
+        <!--------------------------------------------------------------------------------------->
+        <section class="sec3">
+            <div id="resultado"></div>
+        </section>
+        <!--------------------------------------------------------------------------------------->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="./db/data.json"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

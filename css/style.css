@@ -1,0 +1,203 @@
+/*--GERAL-----------------------------------------------------------------------*/
+:root {
+  font-size: 16px;
+  --bg-color: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --text-color: hsl(227, 75%, 14%);
+  --card-color: hsl(200, 60%, 99%);
+  --btn-text:hsl(227, 75%, 14%);
+  --border-color:hsl(200, 60%, 99%);
+  --iconbg:hsl(0, 0%, 93%);
+  --card-text:hsl(226, 11%, 37%);
+}
+[data-theme="dark"] {
+  --bg-color: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --text-color: hsl(200, 60%, 99%);
+  --card-color: hsl(225, 23%, 24%);
+  --btn-text:hsl(200, 60%, 99%);
+  --border-color:hsl(225, 23%, 24%);
+  --iconbg:hsl(226, 11%, 37%);
+  --card-text:hsl(0, 0%, 93%);
+}
+* {
+  transition: 
+  background 0.5s ease,
+  background-color 0.5s ease,
+  color 0.5s ease,
+  border-color 0.5s ease,
+  box-shadow 0.5s ease,
+  filter 0.5s ease;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 40rem;
+  margin: 0;
+}
+main{
+  width:60rem;
+  justify-self: center;
+}
+@media screen and (max-width:768px){
+  main{
+    width:20rem;
+  }
+}
+/*--SECTION 1-------------------------------------------------------------------*/
+.sec1{
+  display:flex;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+.title1{
+  border: 1px solid lightgray;
+  width:100%;
+  background-color: var(--card-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pic-title{
+  width: clamp(8rem, 10rem, 15rem);
+}
+#colorbtn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  width:3rem;
+}
+.lightmode{
+  background-color: var(--iconbg);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.lightmode:focus {
+  box-shadow: 0 0 0 0.2rem hsl(3, 86%, 64%,0.7);
+}
+/*--SECTION 2-------------------------------------------------------------------*/
+.sec2{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+h1{
+  width:39.8rem;
+  font-weight: 600;
+}
+#filters{
+  width:18rem;
+  text-align: end;
+}
+.btn{
+  border-radius: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 500;
+}
+button.btn.botao {
+  --bs-btn-font-weight: 450;
+  --bs-btn-color: var(--bg-color);
+  --bs-btn-bg: var(--card-color);
+  --bs-btn-border-color: hsl(0, 0%, 78%);
+  --bs-btn-hover-color: var(--card-color);
+  --bs-btn-hover-bg: hsl(3, 71%, 56%);
+  --bs-btn-hover-border-color: var(--card-color);
+  --bs-btn-active-color: var(--card-color);
+  --bs-btn-active-bg: hsl(3, 86%, 64%);
+  --bs-btn-active-border-color: var(--card-color);
+}
+button.btn.botao:focus {
+  box-shadow: 0 0 0 0.2rem hsl(3, 86%, 64%,0.7);
+  border: 2px solid hsl(200, 60%, 99%);
+}
+@media screen and (max-width:768px){
+  h1{
+    width:20rem;
+    text-align: center;
+  }
+  #filters{
+    width:20rem;
+    text-align: center;
+  }
+}
+/*--SECTION 3-------------------------------------------------------------------*/
+.fakecard{
+  border: 1px solid hsl(0, 0%, 78%);
+  background-color: var(--card-color);
+  border-radius: 0.75rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  height: 13rem;
+  width:19rem;
+}
+.logo{
+  width: 4rem;
+}
+.card-body{
+  padding-left: 1rem;
+  height: 8rem;
+  width:10rem;
+}
+h2{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+p{
+  font-weight: 400;
+  color:var(--card-text);
+}
+.form-switch .form-check-input {
+  width: 3em;
+  min-height: 1.5rem; 
+  background-color: hsl(0, 0%, 78%); /* cor da trilha desativada */
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='hsl(200, 60%, 99%)'/></svg>"); /* cor do botão */
+  background-position: left center; /* botão à esquerda (desativado) */
+  transition: background-position 0.15s ease-in-out, background-color 0.15s ease-in-out; /* transição */
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+}
+.form-check-input:checked {
+  background-position: right center; /* botão à direita (ativado) */
+  background-color: hsl(3, 71%, 56%); /* cor da trilha ativada */
+}
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem hsl(3, 86%, 64%,0.7);
+}
+.card-top{
+  display:flex;
+  flex-wrap: wrap;
+}
+.card-bottom{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#resultado{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 100%;
+  
+}
+
+@media screen and (max-width:768px){
+  .sec3{
+    padding-top: 1rem;
+  }
+  .fakecard{
+    width:100%;
+  }
+  #resultado{
+    gap: 1.5rem;
+  }
+}
