@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github - Project 05 - Files](https://github.com/vanessaplj/project-05-extensions)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Github Pages - Project 05 - Extensions](https://vanessaplj.github.io/project-05-extensions/)
 
 ## My process
 
